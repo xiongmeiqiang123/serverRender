@@ -14,20 +14,9 @@ class Application extends React.Component {
         const settings = ['MIMAX2(oxygen)','RedmiNote4X(mido)','MI6(sagit)','MIX2(chiron)','MiNote3(jason)','Redmi4X(santoni)','MI5X(tiffany)','RedmiNote5A(ugg)',].map((y) => ({y}))
         return (
 
-            <html lang="en">
-                <head>
-                    <link rel="stylesheet" media="all" href="/assets/styles.css"/>
-
-                </head>
-                <body>
-                    <div id="content">
-                        <div style={{width:'100%', backgroundColor: 'white'}}>
-                            <Chart data={data} settings={settings}></Chart>
-                        </div>
-                    </div>
-                </body>
-
-            </html>
+            <div style={{width:'100%', backgroundColor: 'white'}}>
+                <Chart data={data} settings={settings}></Chart>
+            </div>
 
 
 		);

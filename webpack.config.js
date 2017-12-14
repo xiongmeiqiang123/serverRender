@@ -99,7 +99,7 @@ module.exports = [
 		entry: "./app/entry.js",
 		output: {
 			path: assetsPath,
-			filename: "[hash].js",
+			filename: "bundle.js",
 			publicPath: publicPath
 		},
 		module: {
