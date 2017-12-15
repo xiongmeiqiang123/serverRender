@@ -4,6 +4,24 @@
 可以根据输入的参数，提供渲染的图表图片下载。
 
 
+## api
+```
+url: /getImageByData
+type: POST,
+content-Type: application/json
+params:
+    title: '图表标题',
+    settings: ['model1', 'model2'],
+    type: '图表类型'
+    data: []
+```
+
+* 图表类型
+    * pie 饼状图
+    * lineChart
+    * barChart
+    * rankingChart
+
 ## Usage
 
 ``` text
