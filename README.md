@@ -16,11 +16,11 @@ params:
     data: []
 ```
 
-* 图表类型
-    * pie 饼状图
-    * lineChart
-    * barChart
-    * rankingChart
+* 图表类型 type的取值
+    * pie //饼状图
+    * lineChart //折线图
+    * barChart //柱状图
+    * rankingChart //排名图
 
 ## Usage
 
