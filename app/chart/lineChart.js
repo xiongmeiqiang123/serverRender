@@ -27,7 +27,7 @@ function dataFormat(data=[], setting={}, formatData, resultData=[]){
     return resultData;
 }
 
-class Application extends React.Component {
+class Chart extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -86,5 +86,5 @@ function CustomizedLabel(props={}){
 		</svg>
 	)
 }
-
-export default  Application
+Chart.type = 'lineChart'
+export default  Chart

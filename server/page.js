@@ -6,7 +6,8 @@ var Application = require("../app/Application").default;
 module.exports = function(req, scriptFilename, query={}) {
     const settings = query.settings || [],
         data = query.data || [],
-        title = query.title
+        title = query.title,
+        type = query.type
     const pageStr = ReactDOMServer.renderToStaticMarkup(
         <html lang="en">
             <head>
@@ -15,7 +16,7 @@ module.exports = function(req, scriptFilename, query={}) {
             </head>
             <body>
                 <div id="content">
-                    <Application settings={settings} data={data} title={title}></Application>
+                    <Application settings={settings} data={data} title={title} type={type}></Application>
                 </div>
             </body>
             <script src='/assets/bundle.js'></script>
