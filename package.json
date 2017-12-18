@@ -19,6 +19,7 @@
     "homepage": "https://github.com/webpack/react-webpack-server-side-example",
     "dependencies": {
         "babel-runtime": "^6.26.0",
+        "cors": "^2.8.4",
         "echarts": "^3.8.5",
         "echarts-for-react": "^2.0.0",
         "envify": "~1.2.1",

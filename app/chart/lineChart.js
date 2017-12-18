@@ -60,7 +60,7 @@ class Chart extends React.Component {
     	            margin={{top: 5, right: 30, left: 20, bottom: 5}}>
 
                         <XAxis dataKey="index" tick={<CustomizedAxisTick/>} />
-                        <YAxis  domain={[0, `dataMax+${parseInt(yDangerousValue||0)}`]} scale='sqrt'/>
+                        <YAxis domain={[0, `dataMax+${parseInt(yDangerousValue||0)}`]} scale='sqrt'/>
                         <CartesianGrid strokeDasharray="3 3"/>;
                         <ReferenceLine y={yDangerousValue} stroke="red" strokeDasharray="3 3" strokeWidth='3' isFront={true} label={<CustomizedLabel yDangerousValue={yDangerousValue}></CustomizedLabel>} />
                         <Tooltip/>

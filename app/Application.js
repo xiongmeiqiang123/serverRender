@@ -28,7 +28,7 @@ class Application extends React.Component {
 				ChartComponent = RankingChart;
 				break;
 			default:
-				ChartComponent = <div></div>
+				ChartComponent = ()=> `没有这种图`
 		}
 		console.log(ChartComponent, 'ChartComponent');
         return (
