@@ -16,6 +16,10 @@ module.exports = function (req, res) {
         width = 1200;
         height = data.length * 60 + 100;
     }
+    if(type === 'pie') {
+        width = 1100;
+        height = 850;
+    }
     const options = {
     	windowSize:{
     		width: width,

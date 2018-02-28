@@ -1,7 +1,7 @@
 import  React from 'react'
 import color from '../colors'
 import CustomizedAxisTick from './tick'
-import {LineChart,XAxis, Line, YAxis,Tooltip, CartesianGrid, Legend, ReferenceLine, Label} from 'recharts'
+import {LineChart,XAxis, Line, YAxis,Tooltip, CartesianGrid, Legend, ReferenceLine, Label, ResponsiveContainer} from 'recharts'
 const data = [
       {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
       {name: 'Page B', uv: 3000, pv: 1398, amt: 2210},
@@ -55,20 +55,23 @@ class Chart extends React.Component {
                 </style>
                 <div style={{margin:'auto', textAlign: 'center'}}>
                     <h2 style={{padding: 10}}>{title}</h2>
-    				<LineChart width={1500} height={450} data={resultData}
-                    style={{display: 'block', margin: 'auto'}}
-    	            margin={{top: 5, right: 30, left: 20, bottom: 5}}>
+                    <ResponsiveContainer width='100%'>
+                        <LineChart  width={1900} height={750}  data={resultData}
+                        style={{display: 'block', margin: 'auto'}}
+        	            margin={{top: 5, right: 30, left: 20, bottom: 5}}>
 
-                        <XAxis dataKey="index" tick={<CustomizedAxisTick/>} />
-                        <YAxis domain={[0, `dataMax+${parseInt(yDangerousValue||0)}`]} scale='sqrt'/>
-                        <CartesianGrid strokeDasharray="3 3"/>;
-                        <ReferenceLine y={yDangerousValue} stroke="red" strokeDasharray="3 3" strokeWidth='3' isFront={true} label={<CustomizedLabel yDangerousValue={yDangerousValue}></CustomizedLabel>} />
-                        <Tooltip/>
-                        <Legend style={{top: -25}} verticalAlign='top'/>
-                        {
-                            Lines
-                        }
-    				</LineChart>
+                            <XAxis dataKey="index" tick={<CustomizedAxisTick/>} />
+                            <YAxis domain={[0, `dataMax+${parseInt(yDangerousValue||0)}`]} scale='sqrt'/>
+                            <CartesianGrid strokeDasharray="3 3"/>;
+                            <ReferenceLine y={yDangerousValue} stroke="red" strokeDasharray="3 3" strokeWidth='3' isFront={true} label={<CustomizedLabel yDangerousValue={yDangerousValue}></CustomizedLabel>} />
+                            <Tooltip/>
+                            <Legend style={{top: -25}} verticalAlign='top'/>
+                            {
+                                Lines
+                            }
+        				</LineChart>
+                    </ResponsiveContainer>
+
                 </div>
 			</div>
 		);
