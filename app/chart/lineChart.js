@@ -55,8 +55,7 @@ class Chart extends React.Component {
                 </style>
                 <div style={{margin:'auto', textAlign: 'center'}}>
                     <h2 style={{padding: 10}}>{title}</h2>
-                    <ResponsiveContainer width='100%'>
-                        <LineChart  width={1900} height={750}  data={resultData}
+                        <LineChart  width={1900} height={600}  data={resultData}
                         style={{display: 'block', margin: 'auto'}}
         	            margin={{top: 5, right: 30, left: 20, bottom: 5}}>
 
@@ -70,7 +69,6 @@ class Chart extends React.Component {
                                 Lines
                             }
         				</LineChart>
-                    </ResponsiveContainer>
 
                 </div>
 			</div>

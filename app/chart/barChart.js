@@ -55,7 +55,7 @@ class Chart extends React.Component {
                 </style>
                 <div style={{margin:'auto', textAlign: 'center'}}>
                     <h2 style={{padding: 10}}>{title}</h2>
-    				<BarChart width={1900} height={750} data={resultData}
+    				<BarChart width={1900} height={600} data={resultData}
                         style={{ margin: 'auto'}}
         	            margin={{top: 5, right: 30, left: 20, bottom: 5}}>
 
