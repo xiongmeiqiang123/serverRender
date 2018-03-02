@@ -11,6 +11,24 @@ const data = [
       {name: 'Page F', uv: 2390, pv: 3800, amt: 2500},
       {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
 ];
+
+const CustomizedLabel1  = function(props){
+
+		const { x, y, value: _value, dataKey, stroke, dataFlag, width} = props;
+		// let data = payload[dataKey];
+		let value = _value;
+		if(!isFinite(Number(value))) {
+			return null;
+		}
+
+		if(value <1/10000) {
+			value = '<1/10000'
+		}
+		return (
+			<text x={x + width * 0.5} y={y || 0} dy={-4} fill={stroke} fontSize={12} textAnchor="middle">{value}</text>
+		)
+}
+
 function dataFormat(data=[], setting={}, formatData, resultData=[]){
     // let resultData = [];
     data.map((elem, i) => {
@@ -43,6 +61,7 @@ class Chart extends React.Component {
 				   fill={item.color || color[index]}
 				   stroke={item.color || color[index]}
                    type="monotone"
+                   label={<CustomizedLabel1 />}
                    activeDot={{r: 8}}
 				/>
         })
@@ -56,8 +75,11 @@ class Chart extends React.Component {
                 <div style={{margin:'auto', textAlign: 'center'}}>
                     <h2 style={{padding: 10}}>{title}</h2>
     				<BarChart width={1900} height={600} data={resultData}
+                        barSize={38}
+                        barGap={0}
                         style={{ margin: 'auto'}}
-        	            margin={{top: 5, right: 30, left: 20, bottom: 5}}>
+
+        	            margin={{top: 20, right: 30, left: 20, bottom: 5}}>
 
                         <XAxis dataKey="index" tick={<CustomizedAxisTick/>} />
                         <YAxis  domain={[0, `dataMax+${parseInt(yDangerousValue||0)}`]} scale='sqrt'/>
