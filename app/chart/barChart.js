@@ -20,10 +20,6 @@ const CustomizedLabel1  = function(props){
 		if(!isFinite(Number(value))) {
 			return null;
 		}
-
-		if(value <1/10000) {
-			value = '<1/10000'
-		}
 		return (
 			<text x={x + width * 0.5} y={y || 0} dy={-4} fill={stroke} fontSize={12} textAnchor="middle">{value}</text>
 		)
