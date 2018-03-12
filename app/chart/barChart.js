@@ -68,9 +68,11 @@ class Chart extends React.Component {
 		return (
 			<div style={{width:'100%', backgroundColor: 'white'}}>
                 <style>
-                    {`.recharts-legend-wrapper{
-                        top: -15px !important;
-                    }`}
+                    {`
+                        .recharts-legend-wrapper{
+                            top: -15px !important;
+                        }
+                    `}
                 </style>
                 <div style={{margin:'auto', textAlign: 'center'}}>
                     <h2 style={{padding: 10}}>{title}</h2>

@@ -15,7 +15,7 @@ class Tick extends React.Component {
 			name = name.length >textLength? name.slice(0,textLength) + '...' : name;
 			return (
 			<g transform={`translate(${x},${y})`}>
-		        <text x={-5} y={-12} dy={16} textAnchor="end" style={{fontSize: 12}} fill="#666" transform={`rotate(-${rotate})`}>{name}</text>
+		        <text x={x-5} y={y-12} dy={16} textAnchor="end" style={{fontSize: 12}} fill="#666" transform={`rotate(-${rotate})`}>{name}</text>
 			</g>
 		);
 	}
