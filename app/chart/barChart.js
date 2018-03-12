@@ -1,6 +1,6 @@
 import  React from 'react'
 import color from '../colors'
-import CustomizedAxisTick from './tick'
+// import CustomizedAxisTick from './tick'
 import {BarChart,XAxis, Bar, YAxis,Tooltip, CartesianGrid, Legend, ReferenceLine, Label} from 'recharts'
 const data = [
       {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
@@ -62,7 +62,7 @@ class Chart extends React.Component {
 				/>
         })
 
-        // console.log(resultData,'resultData');
+        console.log(resultData,'resultData');
 		return (
 			<div style={{width:'100%', backgroundColor: 'white'}}>
                 <style>
@@ -81,7 +81,7 @@ class Chart extends React.Component {
 
         	            margin={{top: 20, right: 30, left: 20, bottom: 5}}>
 
-                        <XAxis dataKey="index" tick={<CustomizedAxisTick/>} />
+                        <XAxis dataKey="index" />
                         <YAxis  domain={[0, `dataMax+${parseInt(yDangerousValue||0)}`]} scale='sqrt'/>
                         <CartesianGrid strokeDasharray="3 3"/>;
                         <ReferenceLine y={yDangerousValue} stroke="red" strokeDasharray="3 3" strokeWidth='3' isFront={true} label={<CustomizedLabel yDangerousValue={yDangerousValue}></CustomizedLabel>} />

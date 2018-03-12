@@ -45,11 +45,11 @@ app.use((req, res) => {
         store.dispatch(fetchItem(renderProps.params.id))
       ])
       .then(() => {
-        const html = renderToString(
-          <Provider store={store}>
-            <RoutingContext {...renderProps} />
-          </Provider>
-        );
+        // const html = renderToString(
+        //   <Provider store={store}>
+        //     <RoutingContext {...renderProps} />
+        //   </Provider>
+        // );
         res.end(renderFullPage(html, store.getState()));
       });
     } else {

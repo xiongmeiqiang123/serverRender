@@ -7,16 +7,17 @@ class Tick extends React.Component {
 	}
 
 	render(){
-		const {x, y, stroke, payload, rotate=45, textLength=30} = this.props;
+		const {x, y, stroke, payload, rotate=45, textLength = 30} = this.props;
+		console.log(this.props,'props');
 			if(!payload.value) {
 				return null;
 			}
 			let name = payload.value;
-			name = name.length >textLength? name.slice(0,textLength) + '...' : name;
-			// console.log(name,'name');
+			name = name.length > textLength ? name.slice(0,textLength) + '...' : name;
+			console.log(name,'name');
 			return (
 			<g transform={`translate(${x},${y})`}>
-		        <text x={x-5} y={y-12} dy={16} textAnchor="end" style={{fontSize: 12}} fill="#666" transform={`rotate(-${rotate})`}>{name}</text>
+		        <text x={5} y={12} dy={16} textAnchor="end" style={{fontSize: 12}} fill="#666" transform={`rotate(-${rotate})`}>{name}</text>
 			</g>
 		);
 	}

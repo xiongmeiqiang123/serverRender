@@ -34,6 +34,15 @@ class Application extends React.Component {
         return (
 
             <div style={{width:'100%', backgroundColor: 'white'}}>
+				<style>
+					{
+						`
+							svg:not(:root){
+								overflow: visible!important;
+							}
+						`
+					}
+				</style>
                 <ChartComponent data={data} settings={settings.map((y) => ({y}))} title={title}></ChartComponent>
             </div>
 

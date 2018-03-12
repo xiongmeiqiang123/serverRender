@@ -15,7 +15,7 @@ module.exports = function(req, scriptFilename, query={}) {
         data = query.data || [],
         title = query.title,
         type = query.type
-    const pageStr = ReactDOMServer.renderToStaticMarkup(
+    const pageStr = ReactDOMServer.renderToString(
         <html lang="en">
             <head>
                 <meta charset="utf-8"/>
