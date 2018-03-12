@@ -98,7 +98,7 @@ class Chart extends React.Component {
                         style={{ display: "block", margin: "auto" }}
                         margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
                     >
-                        <XAxis dataKey="index" tick={<CustomizedAxisTick />} />
+                        <XAxis dataKey="index" />
                         <YAxis
                             domain={[
                                 0,
