@@ -61,6 +61,8 @@ class Chart extends React.Component {
                    activeDot={{r: 8}}
 				/>
         })
+
+        // console.log(resultData,'resultData');
 		return (
 			<div style={{width:'100%', backgroundColor: 'white'}}>
                 <style>

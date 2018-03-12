@@ -4,7 +4,7 @@ var stats = require("../../stats.generated.json");
 var path = require("path");
 
 let width = 2000,
-    height = 768
+    height = 800
 
 module.exports = function (req, res) {
 
