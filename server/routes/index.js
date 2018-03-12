@@ -1,25 +1,10 @@
-var webshot = require('webshot');
-var page = require("../page.generated.js");
-var stats = require("../stats.generated.json");
+const webshot = require('webshot');
+const page = require("../page.generated.js");
+const stats = require("../stats.generated.json");
+const getLines = require('../actions/getImageByData')
+const router = require('express').Router();
 
-var getLines = require('../actions/getImgs/getLines.js')
+router.post("/getImageByData",getLines);
+router.post("/img/getImageByData",getLines);
 
-function routeEntry(req, res) {
-
-    try {
-        return getLines(req, res)
-    } catch (e) {
-        console.log(e, 'test');
-    } finally {
-
-    }
-}
-function route(app) {
-
-    app.post("/getImageByData",routeEntry);
-
-
-    return app;
-}
-
-module.exports = route;
+module.exports = router;
