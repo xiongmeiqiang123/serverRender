@@ -95,15 +95,13 @@ class Chart extends React.Component {
                         width={1900}
                         height={600}
                         data={resultData}
+                        padding={{top:10}}
                         style={{ display: "block", margin: "auto" }}
                         margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
                     >
                         <XAxis dataKey="index" />
                         <YAxis
-                            domain={[
-                                0,
-                                `dataMax+${parseInt(yDangerousValue || 0)}`
-                            ]}
+                            domain = {[0, dataMax => (1.3 * dataMax).toFixed(2)]}
                             scale="sqrt"
                         />
                         <CartesianGrid strokeDasharray="3 3" />;

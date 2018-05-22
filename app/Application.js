@@ -30,7 +30,13 @@ class Application extends React.Component {
 			default:
 				ChartComponent = ()=> `没有这种图`
 		}
-		console.log(ChartComponent, 'ChartComponent');
+		let _settings = settings.map((item) => {
+			if(typeof item === 'string') {
+				return {y:item}
+			}else {
+				return {y: item.key, name: item.name}
+			}
+		})
         return (
 
             <div style={{width:'100%', backgroundColor: 'white'}}>
@@ -43,7 +49,7 @@ class Application extends React.Component {
 						`
 					}
 				</style>
-                <ChartComponent data={data} settings={settings.map((y) => ({y}))} title={title}></ChartComponent>
+                <ChartComponent data={data} settings={_settings} title={title}></ChartComponent>
             </div>
 
 
