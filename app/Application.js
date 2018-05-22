@@ -31,6 +31,7 @@ class Application extends React.Component {
 				ChartComponent = ()=> `没有这种图`
 		}
 		let _settings = settings.map((item) => {
+			console.log(item, 'item');
 			if(typeof item === 'string') {
 				return {y:item}
 			}else {

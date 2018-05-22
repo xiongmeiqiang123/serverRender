@@ -54,6 +54,7 @@ class Chart extends React.Component {
             return <Bar
                     connectNulls={true}
 				   dataKey={item.y}
+                   name={item.name}
 				   fill={item.color || color[index]}
 				   stroke={item.color || color[index]}
                    type="monotone"
